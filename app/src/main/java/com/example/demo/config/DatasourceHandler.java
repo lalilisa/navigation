@@ -154,4 +154,20 @@ public class DatasourceHandler extends SQLiteOpenHelper {
         }
         return items;
     }
+    public List<Item> getStatistic(){
+        SQLiteDatabase sqLiteDatabase = getReadableDatabase();
+        List<Item> listBook = new ArrayList<>();
+        Cursor cursor = sqLiteDatabase.query("items",new String[]{"id","title","category","MAX(price) AS price","date"},
+                null, null,"category",null,"price DESC");
+        while(cursor!=null && cursor.moveToNext()){
+            int id = cursor.getInt(0);
+            String title = cursor.getString(1);
+            String category = cursor.getString(2);
+            String price = cursor.getString(3);
+            String date = cursor.getString(4);
+            Item item = new Item(id,title,category,price,date);
+            listBook.add(item);
+        }
+        return listBook;
+    }
 }
