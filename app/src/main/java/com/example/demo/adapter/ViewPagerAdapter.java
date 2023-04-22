@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 
 import com.example.demo.fragment.HistoryFragment;
 import com.example.demo.fragment.HomeFragment;
+import com.example.demo.fragment.InfoFragment;
 import com.example.demo.fragment.SearchFragment;
 
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
@@ -24,7 +25,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
             case 0:
                      return new HomeFragment();
             case 1:
-                     return new HistoryFragment();
+                     return new InfoFragment();
             case 2:
                      return new SearchFragment();
             default:

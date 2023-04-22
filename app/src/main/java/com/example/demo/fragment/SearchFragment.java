@@ -158,7 +158,6 @@ public class SearchFragment extends Fragment  implements View.OnClickListener {
                     items1=db.getItemsByCategory(c);
                  totalPrice.setText("Tổng tiền: "+totalPrice(items1));
                 adapter.setList(items1);
-
             }
 
             @Override

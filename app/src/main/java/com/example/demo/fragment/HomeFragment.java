@@ -47,7 +47,8 @@ public class HomeFragment extends Fragment implements RecyclerItemAdapter.ItemLi
         adapter=new RecyclerItemAdapter();
         datasourceHandler=new DatasourceHandler(getContext());
 
-        items=datasourceHandler.getItemsByDate(Utils.getTextCurrentDate("dd/MM/yyyy"));
+//        items=datasourceHandler.getItemsByDate(Utils.getTextCurrentDate("dd/MM/yyyy"));
+        items=datasourceHandler.findAll();
         adapter.setList(items);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.VERTICAL,false));
         recyclerView.setAdapter(adapter);
@@ -59,7 +60,9 @@ public class HomeFragment extends Fragment implements RecyclerItemAdapter.ItemLi
     @Override
     public void onResume() {
         super.onResume();
-        adapter.setList(datasourceHandler.getItemsByDate(Utils.getTextCurrentDate("dd/MM/yyyy")));
+//        adapter.setList(datasourceHandler.getItemsByDate(Utils.getTextCurrentDate("dd/MM/yyyy")));
+          adapter.setList(datasourceHandler.findAll());
+
     }
 
     @Override
