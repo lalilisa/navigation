@@ -18,6 +18,9 @@
             android:name=".UpdateDeleteActivity"
             android:exported="false" />
         <activity
+            android:name=".ActivityCheckBox"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

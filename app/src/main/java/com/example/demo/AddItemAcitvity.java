@@ -35,6 +35,7 @@ public class AddItemAcitvity extends AppCompatActivity implements View.OnClickLi
         init();
         button.setOnClickListener(this);
         date.setOnClickListener(this);
+        btnCancle.setOnClickListener(this);
     }
 
     void init(){

@@ -40,6 +40,7 @@ public class UpdateDeleteActivity extends AppCompatActivity implements View.OnCl
         date.setOnClickListener(this);
         buttonUpdate.setOnClickListener(this);
         btnDelete.setOnClickListener(this);
+        btnCancle.setOnClickListener(this);
 
     }
 

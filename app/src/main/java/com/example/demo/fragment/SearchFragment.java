@@ -151,7 +151,7 @@ public class SearchFragment extends Fragment  implements View.OnClickListener {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String c= category.getSelectedItem().toString();
-                List<Item> items1=new ArrayList<>();
+                List<Item> items1;
                 if(c.equalsIgnoreCase("all"))
                     items1=db.findAll();
                 else
